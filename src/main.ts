@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 
-import { registerApp } from './global'
+import { globalRegister } from './global'
 
 // 全局引入
 // import ElementPlus from 'element-plus'
@@ -17,7 +17,8 @@ import store from './store'
 // createApp(App).mount('#app')
 const app = createApp(App)
 
-registerApp(app)
+globalRegister(app)
+// app.use(globalRegister)
 app.use(router)
 app.use(store)
 // app.use(ElementPlus)
